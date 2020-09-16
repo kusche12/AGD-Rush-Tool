@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Rush AGD :)</title>
+    <meta name="description" content="Rush AGD" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="text/javascript" src="script.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="form">
+        <form action="./script.js">
+          <label for="name">Name of PNM</label><br />
+          <input
+            type="text"
+            class="input-text"
+            id="name"
+            name="name"
+            placeholder="Firstname Lastname"
+          />
+          <input
+            type="button"
+            value="Submit"
+            class="submit"
+            onclick="doFunction();"
+          />
+        </form>
+      </div>
+      <div class="results">
+        <ul id="list"></ul>
+      </div>
+    </div>
+  </body>
+</html>
