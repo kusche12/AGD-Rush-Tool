@@ -12,8 +12,8 @@ function renderPosts(data, name) {
 
   // Create a list of notes according to the name
   data.forEach((post) => {
-    if (post.pnmName === name) {
-      notes.push(post.note);
+    if (post.pnmMember.toUpperCase() === name.toUpperCase()) {
+      notes.push([post.note, post.agdMember]);
     }
   });
   let parent = document.getElementById('list');
@@ -31,7 +31,8 @@ function renderPosts(data, name) {
 
 function renderSinglePost(note) {
   const div = document.createElement('li');
-  div.textContent = note;
+
+  div.textContent = `${note[1].toUpperCase()}: ${note[0]}`;
   div.setAttribute('class', 'note');
   document.getElementById('list').appendChild(div);
 }
